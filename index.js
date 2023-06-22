@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.post('/newMessage',async(req,res)=>{
     const {message} = req.body
 
-    if(!message || message.text.toLowerCase().index('salaam')<0){
+    if(!message || message.text.toLowerCase().indexOf('salaam')<0){
         return res.end()
     }
 
